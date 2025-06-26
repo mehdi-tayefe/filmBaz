@@ -1,11 +1,20 @@
+import PropTypes from "prop-types"
+import Footer from "./Footer"
+import Header from "./Header"
 
 
-function Layout() {
+function Layout({children}) {
   return (
-    <div>
-      
-    </div>
+    <>
+      <Header />
+      {children}
+      <Footer />
+    </>
   )
 }
+
+Layout.propTypes = {
+    children: PropTypes.node.isRequired, 
+};
 
 export default Layout
